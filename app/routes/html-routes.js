@@ -12,20 +12,20 @@ module.exports = function(app) {
   console.log("html-routes listening");
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
-  //app.get("/", function(req, res) {
-  //res.sendFile(path.join(__dirname, "../public/view.html"));
-  //});
+  //index route loads welcome.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/welcome.html"));
+  });
 
-  // add route loads the add.html page, where users can enter new books to the db
-  //app.get("/add", function(req, res) {
-  //res.sendFile(path.join(__dirname, "../public/add.html"));
-  //});
+  // login route loads the login.html page, where users can login.
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+  });
 
-  // all route loads the all.html page, where all books in the db are displayed
-  //app.get("/all", function(req, res) {
-  //res.sendFile(path.join(__dirname, "../public/all.html"));
-  //});
+  // signup route loads the signup.html page, where users can signup as volunteers or organizations.
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+  });
 
   // short route loads the short.html page, where short books in the db are displayed
   //app.get("/short", function(req, res) {
