@@ -23,6 +23,9 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("app/public"));
 
+// Sets up the passport for login verification
+// =============================================================
+
 // Routes
 // =============================================================
 require("./app/routes/api-routes.js")(app);

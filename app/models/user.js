@@ -1,14 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
-  var Organization = sequelize.define("Organization", {
-    organizer: {
-      type: DataTypes.STRING
-    },
+  var User = sequelize.define("User", {
     email: {
       type: DataTypes.STRING
     },
-    phone_number: {
+    password: {
+      type: DataTypes.STRING
+    },
+    hh_role: {
       type: DataTypes.STRING
     }
   });
-  return Organization;
+  return User;
 };

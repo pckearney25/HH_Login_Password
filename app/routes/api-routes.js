@@ -10,6 +10,23 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
   console.log("api-routes listening");
+
+  app.post("/api/login", function(req, res) {
+    console.log(req.body);
+    db.User.findAll({
+      where: req.body
+    }).then(function(dbUser) {
+      console.log(dbUser);
+      res.json(dbUser);
+      if (!dbUser)
+      db.Volunteer.findOne({
+        where: {id: dbUser[0].id}
+      }).then(function(dbVol) {
+        console.log(dbVol);
+        res.json(IDBCursorWithValue);
+    });
+  });
+
   //THESE WILL HAVE TO BE WRITTEN FOR THE FUNCTIONS REQUIRED OF YOUR SPECIFIC PAGES.
   //NOTE: SOME OF THESE WILL HAVE TO BE CALLED AS SOON AS YOUR PAGE LOADS.
   //As such, you might want to bracket your page.js files in a document ready function.

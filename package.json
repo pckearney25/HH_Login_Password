@@ -1,20 +1,27 @@
 {
-  "name": "HH-PasswordJS",
+  "name": "HH_Login_Password",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "KU Coding Bootcamp Team Project 2 Login components with password.js",
+  "main": "serverPW.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pckearney25/HH_Login_Password.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pckearney25/HH_Login_Password/issues"
+  },
+  "homepage": "https://github.com/pckearney25/HH_Login_Password#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mysql2": "^1.5.3",
     "path": "^0.12.7",
     "sequelize": "^4.37.7"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
